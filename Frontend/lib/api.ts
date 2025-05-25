@@ -36,7 +36,7 @@ export async function runQuery(query: string, ragType: string) {
         console.log("API_BASE_URL:", API_BASE_URL);
         console.log("typeof API_BASE_URL:", typeof API_BASE_URL);
 
-        const response = await api.post("/query", { query, rag_type: ragType });
+        const response = await api.post("/query/", { query, rag_type: ragType });
         return response.data;
     } catch (error) {
         console.error("Full error:", error);
