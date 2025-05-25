@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:8000"; // Update to deployed URL later
+const API_BASE_URL = "https://ragplayground-production.up.railway.app/"; // Update to deployed URL later
 
 const api = axios.create({
     baseURL: API_BASE_URL,
