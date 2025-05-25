@@ -16,14 +16,15 @@ def process_pdf(file: UploadFile):
         # Mock Jina AI embedding
         mock_embedding = [0.1] * 768
         
-        # Store in mock Qdrant
-        storage_result = store_pdf_data(file.filename, text, page_numbers)
+        # Store in Qdrant
+        storage_result = store_pdf_data(file.filename, text, page_numbers, mock_embedding)
         
         return {
             "filename": file.filename,
             "text": text[:200],
             "pages": page_numbers,
-            "embedding": mock_embedding[:5]
+            "embedding": mock_embedding[:5],
+            "point_id": storage_result["point_id"]
         }
     except Exception as e:
         raise Exception(f"PDF processing failed: {str(e)}")
