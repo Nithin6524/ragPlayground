@@ -1,0 +1,16 @@
+*.env
+
+*/node_modules
+
+*.next
+
+
+venv
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.so
+.pytest_cache/
