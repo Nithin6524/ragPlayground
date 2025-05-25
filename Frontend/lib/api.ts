@@ -2,6 +2,8 @@ import axios from "axios";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
+console.log("Environment variable:", process.env.NEXT_PUBLIC_API_URL);
+
 const api = axios.create({
     baseURL: API_BASE_URL,
 });
@@ -30,8 +32,8 @@ export async function uploadPDF(file: File) {
 
 export async function runQuery(query: string, ragType: string) {
     try {
+        
         const response = await api.post("/query", { query, rag_type: ragType });
-        console.log(API_BASE_URL,"BASE URL");
         return response.data;
 
     } catch (error) {
