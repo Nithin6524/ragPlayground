@@ -50,13 +50,13 @@ export function UploadForm() {
         <div className="max-w-2xl mx-auto">
             <div className="relative group">
                 {/* Glass morphism card */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-indigo-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-indigo-500/20 rounded-2xl blur-xl  transition-all duration-300"></div>
                 <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
                     <div className="text-center">
                         <div className="mb-8">
                             <div className="relative inline-block">
-                                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-lg opacity-50"></div>
-                                <div className="relative bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-full">
+                                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full blur-lg opacity-50"></div>
+                                <div className="relative bg-gradient-to-r from-purple-500 to-violet-500 p-4 rounded-full">
                                     <Upload className="h-8 w-8 text-white" />
                                 </div>
                             </div>
@@ -84,10 +84,10 @@ export function UploadForm() {
                                 className={`group relative inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 cursor-pointer ${
                                     isUploading
                                         ? "bg-gray-500/50 cursor-not-allowed text-gray-300"
-                                        : "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white shadow-lg hover:shadow-purple-500/25 transform hover:scale-105"
+                                        : "bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-lg  transform hover:scale-105"
                                 }`}
                             >
-                                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-violet-600 rounded-xl blur opacity-0 transition-opacity duration-300"></div>
                                 <div className="relative flex items-center">
                                     {isUploading ? (
                                         <>
