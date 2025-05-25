@@ -6,6 +6,11 @@ app = FastAPI(title="RAG Playground")
 app.include_router(pdf.router)
 app.include_router(query.router)
 
+
+@app.get("/")
+def greeting():
+    return {"greeting":"welcome to rag playground api"}
+
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}
