@@ -1,7 +1,16 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from src.api.routers import pdf, query
 
 app = FastAPI(title="RAG Playground")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],  # Frontend URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(pdf.router)
 app.include_router(query.router)
