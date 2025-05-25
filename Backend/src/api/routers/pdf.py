@@ -8,7 +8,6 @@ router = APIRouter(prefix="/pdf", tags=["PDF"])
 async def upload_pdf(file: UploadFile = File(...)):
     if not file.filename.endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Only PDF files allowed")
-
     try:
         result = process_pdf(file)
         return {
