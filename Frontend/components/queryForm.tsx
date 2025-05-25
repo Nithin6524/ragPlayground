@@ -72,9 +72,9 @@ export function QueryForm({ onResults }: QueryFormProps) {
 
     return (
         <div className="max-w-5xl mx-auto">
-            <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
+            <div className="relative">
+                <div className="absolute inset-0  rounded-2xl blur-xl"></div>
+                <div className="relative  border border-white/40 rounded-2xl p-8 shadow-2xl">
                     <div className="mb-8 text-center">
                         <div className="flex items-center justify-center mb-4">
                             <Sparkles className="h-8 w-8 text-purple-400 mr-3" />
@@ -99,7 +99,7 @@ export function QueryForm({ onResults }: QueryFormProps) {
                             <div className="relative">
                                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl blur"></div>
                                 <div className="relative flex items-center">
-                                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-purple-700 z-10" />
+                                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-pink-700 z-10" />
                                     <input
                                         type="text"
                                         id="query"
@@ -108,7 +108,7 @@ export function QueryForm({ onResults }: QueryFormProps) {
                                             setQuery(e.target.value)
                                         }
                                         placeholder="Ask a question about your PDFs..."
-                                        className="w-full pl-12 pr-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-300 text-lg"
+                                        className="w-full pl-12 pr-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-300  text-lg"
                                         aria-label="Enter your query"
                                     />
                                 </div>
@@ -126,14 +126,14 @@ export function QueryForm({ onResults }: QueryFormProps) {
                                         className="relative group"
                                     >
                                         <div
-                                            className={`absolute inset-0 bg-gradient-to-r ${ragType.bgGradient} rounded-xl blur opacity-0 group-hover:opacity-100 transition-all duration-300`}
+                                            className={`absolute inset-0 `}
                                         ></div>
                                         <label
                                             className={`relative block p-6 border-2 rounded-xl cursor-pointer transition-all duration-300 ${
                                                 selectedRAGTypes.includes(
                                                     ragType.id
                                                 )
-                                                    ? `border-white/40 bg-gradient-to-r ${ragType.bgGradient} backdrop-blur-sm`
+                                                    ? `border-white/40  bg-gradient-to-br ${ragType.bgGradient} backdrop-blur-sm`
                                                     : "border-white/20 bg-white/5 backdrop-blur-sm hover:border-white/30 hover:bg-white/10"
                                             }`}
                                         >
@@ -152,7 +152,7 @@ export function QueryForm({ onResults }: QueryFormProps) {
                                             />
                                             <div className="flex items-start">
                                                 <div
-                                                    className={`flex-shrink-0 w-6 h-6 border-2 rounded-md mt-1 mr-4 transition-all duration-300 ${
+                                                    className={`flex-shrink-0 w-6 h-6 border-2 rounded-md mt-1 mr-4 ${
                                                         selectedRAGTypes.includes(
                                                             ragType.id
                                                         )
@@ -176,7 +176,7 @@ export function QueryForm({ onResults }: QueryFormProps) {
                                                         </svg>
                                                     )}
                                                 </div>
-                                                <div>
+                                                <div className="min-h-22">
                                                     <div className="font-bold text-white text-lg mb-2">
                                                         {ragType.label}
                                                     </div>
@@ -199,15 +199,15 @@ export function QueryForm({ onResults }: QueryFormProps) {
                                     selectedRAGTypes.length === 0 ||
                                     isQuerying
                                 }
-                                className={`group relative inline-flex items-center px-10 py-4 text-lg font-bold rounded-xl transition-all duration-300 ${
+                                className={`bg-gradient-to-r from-purple-600 to-violet-600  relative inline-flex items-center px-10 py-4 text-lg font-bold rounded-xl transition-all duration-300 ${
                                     !query.trim() ||
                                     selectedRAGTypes.length === 0 ||
                                     isQuerying
                                         ? "bg-gray-500/50 cursor-not-allowed text-gray-400"
-                                        : "bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 hover:from-purple-500 hover:via-pink-500 hover:to-indigo-500 text-white shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105"
+                                        : "bg-gradient-to-r text-white shadow-2xl cursor-pointer transform hover:scale-105"
                                 }`}
                             >
-                                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+                                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 rounded-xl blur opacity-0 "></div>
                                 <div className="relative flex items-center text-gray-100">
                                     {isQuerying ? (
                                         <>

@@ -48,10 +48,10 @@ export function UploadForm() {
 
     return (
         <div className="max-w-2xl mx-auto">
-            <div className="relative group">
+            <div className="relative">
                 {/* Glass morphism card */}
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-indigo-500/20 rounded-2xl blur-xl  transition-all duration-300"></div>
-                <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
+                <div className="relative border border-white/40 rounded-2xl p-8 shadow-2xl">
                     <div className="text-center">
                         <div className="mb-8">
                             <div className="relative inline-block">
@@ -81,7 +81,7 @@ export function UploadForm() {
                             />
                             <label
                                 htmlFor="pdf-upload"
-                                className={`group relative inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 cursor-pointer ${
+                                className={` relative inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 cursor-pointer ${
                                     isUploading
                                         ? "bg-gray-500/50 cursor-not-allowed text-gray-300"
                                         : "bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-lg  transform hover:scale-105"

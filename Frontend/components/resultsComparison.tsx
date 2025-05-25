@@ -36,8 +36,8 @@ export function ResultsComparison({ results }: ResultsComparisonProps) {
         return (
             <div className="max-w-6xl mx-auto">
                 <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-500/20 to-gray-600/20 rounded-2xl blur-xl"></div>
-                    <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-12 text-center">
+                    <div className="absolute inset-0 rounded-2xl blur-xl"></div>
+                    <div className="relative  border rounded-2xl p-12 text-center">
                         <div className="text-gray-400">
                             <Search className="mx-auto h-16 w-16 mb-6" />
                             <p className="text-xl">
