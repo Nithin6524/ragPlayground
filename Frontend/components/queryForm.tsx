@@ -18,7 +18,7 @@ const RAG_TYPES = [
         label: "Self-Query RAG",
         description: "Query understanding and filtering",
         gradient: "from-purple-500 to-violet-500",
-        bgGradient: "from-purple-500/20 to-violet-500/20",
+        bgGradient: "from-purple-500/20 to-pink-500/20",
     },
     {
         id: "reranker",
@@ -73,7 +73,7 @@ export function QueryForm({ onResults }: QueryFormProps) {
     return (
         <div className="max-w-5xl mx-auto">
             <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl  transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                 <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 shadow-2xl">
                     <div className="mb-8 text-center">
                         <div className="flex items-center justify-center mb-4">
@@ -97,7 +97,7 @@ export function QueryForm({ onResults }: QueryFormProps) {
                                 Your Question
                             </label>
                             <div className="relative">
-                                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-violet-500/20 rounded-xl blur"></div>
+                                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl blur"></div>
                                 <div className="relative flex items-center">
                                     <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-purple-700 z-10" />
                                     <input
@@ -126,7 +126,7 @@ export function QueryForm({ onResults }: QueryFormProps) {
                                         className="relative group"
                                     >
                                         <div
-                                            className={`absolute inset-0 bg-gradient-to-r ${ragType.bgGradient} rounded-xl blur opacity-0  transition-all duration-300`}
+                                            className={`absolute inset-0 bg-gradient-to-r ${ragType.bgGradient} rounded-xl blur opacity-0 group-hover:opacity-100 transition-all duration-300`}
                                         ></div>
                                         <label
                                             className={`relative block p-6 border-2 rounded-xl cursor-pointer transition-all duration-300 ${
@@ -204,10 +204,11 @@ export function QueryForm({ onResults }: QueryFormProps) {
                                     selectedRAGTypes.length === 0 ||
                                     isQuerying
                                         ? "bg-gray-500/50 cursor-not-allowed text-gray-400"
-                                        : "bg-gradient-to-l from-purple-600 via-pink-600 to-indigo-600  text-white shadow-2xl transform hover:scale-105"
+                                        : "bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 hover:from-purple-500 hover:via-pink-500 hover:to-indigo-500 text-white shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105"
                                 }`}
                             >
-                                <div className="relative flex items-center text-gray-100 cursor-pointer">
+                                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+                                <div className="relative flex items-center text-gray-100">
                                     {isQuerying ? (
                                         <>
                                             <Loader2 className="animate-spin -ml-1 mr-3 h-6 w-6" />
