@@ -5,7 +5,7 @@ from src.services.rag.self_query_rag import self_query_rag
 from src.services.rag.reranker_rag import reranker_rag
 from src.core.logger import logger
 
-router = APIRouter(prefix="/query/", tags=["Query"])
+router = APIRouter(prefix="/query", tags=["Query"])
 
 class QueryRequest(BaseModel):
     query: str
