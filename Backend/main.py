@@ -1,15 +1,24 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from src.api.routers import pdf, query
 
 app = FastAPI(title="RAG Playground")
 
+# Allow CORS from all origins
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
+)
+
 app.include_router(pdf.router)
 app.include_router(query.router)
 
-
 @app.get("/")
 def greeting():
-    return {"greeting":"welcome to rag playground api"}
+    return {"greeting": "welcome to rag playground api"}
 
 @app.get("/health")
 async def health_check():
