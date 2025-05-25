@@ -95,3 +95,12 @@ RAG Playground is a web application for uploading PDF documents, querying their 
    - View results in a mobile-friendly tabbed view or desktop grid.
    - Expand context to see retrieved chunks, sources, and page numbers.
    - Review the comparison summary for insights on RAG performance.
+
+
+## Deployment
+
+-The frontend is deployed on vercel
+  **https://rag-playground-e18n.vercel.app/**
+
+-The backend is deployed on Railway
+  **https://ragplayground-production.up.railway.app/**
