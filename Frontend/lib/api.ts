@@ -32,11 +32,14 @@ export async function uploadPDF(file: File) {
 
 export async function runQuery(query: string, ragType: string) {
     try {
-        
+        console.log("Full URL being called:", `${API_BASE_URL}/query`);
+        console.log("API_BASE_URL:", API_BASE_URL);
+        console.log("typeof API_BASE_URL:", typeof API_BASE_URL);
+
         const response = await api.post("/query", { query, rag_type: ragType });
         return response.data;
-
     } catch (error) {
+        console.error("Full error:", error);
         throw new Error("Query failed: " + error.message);
     }
 }
