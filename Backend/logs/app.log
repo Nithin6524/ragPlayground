@@ -1,0 +1,139 @@
+2025-05-25 18:39:37,832 - INFO - Processing PDF: Nithin_resume.pdf
+2025-05-25 18:39:37,918 - INFO - Extracted text from 2 pages
+2025-05-25 18:39:37,919 - INFO - Generating Jina AI embedding
+2025-05-25 18:39:39,499 - INFO - Generated embedding of length 768
+2025-05-25 18:39:43,286 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 18:39:44,209 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-25 18:39:44,550 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-25 18:39:44,555 - INFO - Stored in Qdrant with point_id: 18cc9dac-2a96-454a-8dc3-75d46747940f
+2025-05-25 18:46:21,168 - INFO - Processing PDF: Nithin_resume.pdf
+2025-05-25 18:46:21,216 - INFO - Extracted text from 2 pages
+2025-05-25 18:46:21,217 - INFO - Generating Jina AI embedding
+2025-05-25 18:46:22,953 - INFO - Generated embedding of length 768
+2025-05-25 18:46:24,795 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 18:46:26,022 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-25 18:46:26,432 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-25 18:46:26,438 - INFO - Stored in Qdrant with point_id: 3042b67b-952c-46fa-87e1-3e398e079846
+2025-05-25 18:47:03,961 - INFO - Processing PDF: Nithin_resume.pdf
+2025-05-25 18:47:03,996 - INFO - Extracted text from 2 pages
+2025-05-25 18:47:03,997 - INFO - Generating Jina AI embedding
+2025-05-25 18:47:05,376 - INFO - Generated embedding of length 768
+2025-05-25 18:47:06,879 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 18:47:07,803 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-25 18:47:08,154 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-25 18:47:08,154 - INFO - Stored in Qdrant with point_id: f636b3b4-8ae6-44d6-a76b-fb19438c17e4
+2025-05-25 18:47:43,196 - INFO - Received query: What is AI?
+2025-05-25 18:47:43,197 - INFO - Processing Basic RAG query: What is AI?
+2025-05-25 18:47:44,929 - INFO - Generated query embedding
+2025-05-25 18:47:46,713 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 18:47:47,774 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/search "HTTP/1.1 200 OK"
+2025-05-25 18:47:47,776 - INFO - Retrieved 3 chunks from Qdrant
+2025-05-25 18:47:49,377 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 18:47:49,383 - INFO - Generated LLM response
+2025-05-25 18:58:10,456 - INFO - Processing PDF: Nithin_resume.pdf
+2025-05-25 18:58:10,480 - INFO - Extracted text from 2 pages
+2025-05-25 18:58:10,481 - INFO - Generating Jina AI embedding
+2025-05-25 18:58:12,031 - INFO - Generated embedding of length 768
+2025-05-25 18:58:13,356 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 18:58:14,287 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-25 18:58:14,573 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/scroll "HTTP/1.1 403 Forbidden"
+2025-05-25 18:58:14,573 - ERROR - PDF processing failed: Unexpected Response: 403 (Forbidden)
+Raw response content:
+b'{"status":{"error":"Forbidden: Index required but not found for \\"filename\\" of one of the following types: [keyword]. Help: Create an index for this key or use a different filter."},"time":1.575e-6}'
+2025-05-25 19:10:42,392 - INFO - Processing PDF: Nithin_resume.pdf
+2025-05-25 19:10:42,460 - INFO - Extracted text from 2 pages
+2025-05-25 19:10:42,460 - INFO - Generating Jina AI embedding
+2025-05-25 19:10:44,057 - INFO - Generated embedding of length 768
+2025-05-25 19:10:46,143 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 19:10:47,005 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-25 19:10:47,310 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/scroll "HTTP/1.1 403 Forbidden"
+2025-05-25 19:10:47,311 - ERROR - PDF processing failed: Unexpected Response: 403 (Forbidden)
+Raw response content:
+b'{"status":{"error":"Forbidden: Index required but not found for \\"filename\\" of one of the following types: [keyword]. Help: Create an index for this key or use a different filter."},"time":1.567e-6}'
+2025-05-25 19:14:00,057 - INFO - Received query: What is the name of the candidate?
+2025-05-25 19:14:00,058 - INFO - Processing Basic RAG query: What is the name of the candidate?
+2025-05-25 19:14:01,785 - INFO - Generated query embedding
+2025-05-25 19:14:04,882 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 19:14:05,934 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/search "HTTP/1.1 200 OK"
+2025-05-25 19:14:05,937 - INFO - Retrieved 3 chunks from Qdrant
+2025-05-25 19:14:09,268 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 19:14:09,275 - INFO - Generated LLM response
+2025-05-25 19:18:03,441 - INFO - Received query: name, type: self_query
+2025-05-25 19:18:03,441 - INFO - Processing Self-Query RAG: name
+2025-05-25 19:18:05,173 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 19:18:05,179 - INFO - Rephrased query: I'm happy to help! However, the original query seems to be simply "name" without any additional context or question. Could you please provide more information about what you're trying to ask?
+2025-05-25 19:18:05,179 - INFO - Processing Basic RAG query: I'm happy to help! However, the original query seems to be simply "name" without any additional context or question. Could you please provide more information about what you're trying to ask?
+2025-05-25 19:18:06,700 - INFO - Generated query embedding
+2025-05-25 19:18:08,151 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 19:18:09,161 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/search "HTTP/1.1 200 OK"
+2025-05-25 19:18:09,163 - INFO - Retrieved 3 chunks from Qdrant
+2025-05-25 19:18:11,034 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 19:18:11,035 - INFO - Generated LLM response
+2025-05-25 19:18:55,847 - INFO - Received query: name, type: basic
+2025-05-25 19:18:55,847 - INFO - Processing Basic RAG query: name
+2025-05-25 19:18:57,325 - INFO - Generated query embedding
+2025-05-25 19:18:58,579 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 19:18:59,589 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/search "HTTP/1.1 200 OK"
+2025-05-25 19:18:59,605 - INFO - Retrieved 3 chunks from Qdrant
+2025-05-25 19:19:00,611 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 19:19:00,612 - INFO - Generated LLM response
+2025-05-25 19:19:25,327 - INFO - Received query: candidate name, type: basic
+2025-05-25 19:19:25,327 - INFO - Processing Basic RAG query: candidate name
+2025-05-25 19:19:26,839 - INFO - Generated query embedding
+2025-05-25 19:19:28,277 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 19:19:29,356 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/search "HTTP/1.1 200 OK"
+2025-05-25 19:19:29,357 - INFO - Retrieved 3 chunks from Qdrant
+2025-05-25 19:19:30,614 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 19:19:30,616 - INFO - Generated LLM response
+2025-05-25 19:19:47,879 - INFO - Received query: candidate name, type: self_query
+2025-05-25 19:19:47,879 - INFO - Processing Self-Query RAG: candidate name
+2025-05-25 19:19:48,904 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 19:19:48,905 - INFO - Rephrased query: Here is a rephrased version of the query for clarity:
+
+"What is the name of the candidate?"
+2025-05-25 19:19:48,905 - INFO - Processing Basic RAG query: Here is a rephrased version of the query for clarity:
+
+"What is the name of the candidate?"
+2025-05-25 19:19:50,422 - INFO - Generated query embedding
+2025-05-25 19:19:51,708 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 19:19:52,655 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/search "HTTP/1.1 200 OK"
+2025-05-25 19:19:52,656 - INFO - Retrieved 3 chunks from Qdrant
+2025-05-25 19:19:53,627 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 19:19:53,628 - INFO - Generated LLM response
+2025-05-25 19:22:22,282 - INFO - Received query: name, type: reranker
+2025-05-25 19:22:22,282 - INFO - Processing Reranker RAG query: name
+2025-05-25 19:22:23,797 - INFO - Generated query embedding
+2025-05-25 19:22:25,302 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 19:22:26,258 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/search "HTTP/1.1 200 OK"
+2025-05-25 19:22:26,260 - INFO - Retrieved 4 chunks from Qdrant
+2025-05-25 19:22:27,551 - ERROR - Reranker RAG failed: 'score'
+2025-05-25 19:23:26,588 - INFO - Received query: candidate name, type: reranker
+2025-05-25 19:23:26,588 - INFO - Processing Reranker RAG query: candidate name
+2025-05-25 19:23:28,084 - INFO - Generated query embedding
+2025-05-25 19:23:30,217 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 19:23:31,105 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/search "HTTP/1.1 200 OK"
+2025-05-25 19:23:31,106 - INFO - Retrieved 4 chunks from Qdrant
+2025-05-25 19:23:32,586 - ERROR - Reranker RAG failed: 'score'
+2025-05-25 19:23:42,916 - INFO - Received query: candidate name, type: reranker
+2025-05-25 19:23:42,916 - INFO - Processing Reranker RAG query: candidate name
+2025-05-25 19:23:44,490 - INFO - Generated query embedding
+2025-05-25 19:23:46,485 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 19:23:47,447 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/search "HTTP/1.1 200 OK"
+2025-05-25 19:23:47,449 - INFO - Retrieved 4 chunks from Qdrant
+2025-05-25 19:23:48,705 - ERROR - Reranker RAG failed: 'score'
+2025-05-25 19:24:00,395 - INFO - Received query: what is ai?, type: reranker
+2025-05-25 19:24:00,395 - INFO - Processing Reranker RAG query: what is ai?
+2025-05-25 19:24:01,721 - INFO - Generated query embedding
+2025-05-25 19:24:03,749 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 19:24:04,656 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/search "HTTP/1.1 200 OK"
+2025-05-25 19:24:04,658 - INFO - Retrieved 4 chunks from Qdrant
+2025-05-25 19:24:05,946 - ERROR - Reranker RAG failed: 'score'
+2025-05-25 19:26:36,496 - INFO - Received query: name, type: reranker
+2025-05-25 19:26:36,496 - INFO - Processing Reranker RAG query: name
+2025-05-25 19:26:37,965 - INFO - Generated query embedding
+2025-05-25 19:26:39,464 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-25 19:26:40,423 - INFO - HTTP Request: POST https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points/search "HTTP/1.1 200 OK"
+2025-05-25 19:26:40,426 - INFO - Retrieved 4 chunks from Qdrant
+2025-05-25 19:26:47,256 - INFO - Reranked to 3 chunks
+2025-05-25 19:26:48,485 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-25 19:26:48,489 - INFO - Generated LLM response
