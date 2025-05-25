@@ -31,7 +31,9 @@ export async function uploadPDF(file: File) {
 export async function runQuery(query: string, ragType: string) {
     try {
         const response = await api.post("/query", { query, rag_type: ragType });
+        console.log(API_BASE_URL,"BASE URL");
         return response.data;
+
     } catch (error) {
         throw new Error("Query failed: " + error.message);
     }
