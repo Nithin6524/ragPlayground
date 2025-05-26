@@ -1,6 +1,5 @@
 from src.api.dependencies import get_jina_embedding, get_qdrant_client, get_groq_client, get_jina_reranker
 from src.core.logger import logger
-from qdrant_client.http.models import Filter, FieldCondition
 import time
 
 def reranker_rag(query: str):
@@ -8,17 +7,31 @@ def reranker_rag(query: str):
         start_time = time.time()
         logger.info(f"Processing Reranker RAG query: {query}")
         
+        # Input validation
+        if not query.strip():
+            raise ValueError("Query cannot be empty")
+        
         # Embed query
         query_embedding = get_jina_embedding(query)
         logger.info("Generated query embedding")
         
-        # Search Qdrant
+        # Search Qdrant (retrieve more for reranking)
         client = get_qdrant_client()
         search_result = client.search(
             collection_name="rag_playground",
             query_vector=query_embedding,
-            limit=5
+            limit=10  # Retrieve more for better reranking
         )
+        
+        if not search_result:
+            logger.warning("No chunks found in vector database")
+            return {
+                "answer": "I couldn't find relevant information to answer your query.",
+                "context": [],
+                "response_time": round(time.time() - start_time, 2),
+                "reranker_scores": []
+            }
+        
         documents = [hit.payload["text"] for hit in search_result]
         context = [
             {"text": hit.payload["text"], "filename": hit.payload["filename"], "pages": hit.payload["pages"]}
@@ -33,9 +46,16 @@ def reranker_rag(query: str):
         top_scores = [pair[0] for pair in sorted_pairs[:3]]
         logger.info(f"Reranked to {len(top_context)} chunks")
         
+        # Format context for LLM
+        context_text = "\n\n".join([
+            f"Source: {item['filename']} (pages {item['pages']})\nContent: {item['text']}"
+            for item in top_context
+        ])
+        
         # Generate response with Groq
         groq_client = get_groq_client()
-        prompt = f"Query: {query}\nContext: {top_context}\nAnswer concisely:"
+        prompt = f"Query: {query}\n\nContext:\n{context_text}\n\nAnswer concisely based on the context:"
+        
         response = groq_client.chat.completions.create(
             model="llama3-8b-8192",
             messages=[{"role": "user", "content": prompt}],

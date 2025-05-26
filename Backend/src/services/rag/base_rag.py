@@ -1,12 +1,15 @@
 from src.api.dependencies import get_qdrant_client, get_jina_embedding, get_groq_client
 from src.core.logger import logger
-from qdrant_client.http.models import Filter, FieldCondition
 import time
 
 def basic_rag(query: str):
     try:
         start_time = time.time()
         logger.info(f"Processing Basic RAG query: {query}")
+        
+        # Input validation
+        if not query.strip():
+            raise ValueError("Query cannot be empty")
         
         # Embed query
         query_embedding = get_jina_embedding(query)
@@ -25,9 +28,16 @@ def basic_rag(query: str):
         ]
         logger.info(f"Retrieved {len(context)} chunks from Qdrant")
         
+        # Format context for LLM
+        context_text = "\n\n".join([
+            f"Source: {item['filename']} (pages {item['pages']})\nContent: {item['text']}"
+            for item in context
+        ])
+        
         # Generate response with Groq
         groq_client = get_groq_client()
-        prompt = f"Query: {query}\nContext: {context}\nAnswer concisely:"
+        prompt = f"Query: {query}\n\nContext:\n{context_text}\n\nAnswer concisely based on the context:"
+        
         response = groq_client.chat.completions.create(
             model="llama3-8b-8192",
             messages=[{"role": "user", "content": prompt}],
