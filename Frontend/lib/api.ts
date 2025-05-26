@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
-console.log(API_BASE_URL,"API_BA");
+console.log(API_BASE_URL, "API_BA");
 const api = axios.create({
     baseURL: API_BASE_URL,
 });
@@ -13,7 +13,7 @@ export async function uploadPDF(formData: FormData) {
 }
 
 export async function runQuery(query: string, ragType: string) {
-    const response = await api.post("/query", {
+    const response = await api.post("/query/", {
         query,
         rag_type: ragType,
     });
