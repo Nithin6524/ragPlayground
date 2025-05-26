@@ -82,6 +82,13 @@ RAG Playground is a web application for uploading PDF documents, querying their 
   - `logs/`: Log files (`app.log`).
   - `main.py`: FastAPI app entry point.
 
+
+# ⚠️ RECOMMENDATION
+
+### **Upload PDFs with fewer than 20 pages**  
+### for **faster processing and easier checking**.
+
+
 ## Usage
 
 1. **Upload PDFs**:
