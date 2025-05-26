@@ -9,7 +9,6 @@ RAG Playground is a web application for uploading PDF documents, querying their 
 - **PDF Upload**: Upload one or more PDFs for text extraction and embedding generation.
 - **Multi-RAG Queries**: Query PDFs using Basic RAG, Self-Query RAG, or Reranker RAG architectures.
 - **Results Comparison**: Compare RAG outputs with answers, retrieved context, response times, and scores in a responsive UI (mobile tabs, desktop grid).
-- **Persistent Results**: Query results are saved in `localStorage` for persistence across page refreshes.
 - **Modern UI**: Glassmorphism design with vibrant gradients, built with Tailwind CSS and Lucide icons.
 - **Logging**: Backend logs (`logs/app.log`) for debugging and monitoring.
 
@@ -73,6 +72,7 @@ RAG Playground is a web application for uploading PDF documents, querying their 
 ## Project Structure
 
 - `frontend/`: Next.js app with components (`UploadForm.tsx`, `QueryForm.tsx`, `ResultsComparison.tsx`, `ResultsCard.tsx`).
+  - `context/`: uploadContext.tsx for maintaining uploading status of a pdf.
   - `components/`: Reusable UI components.
   - `lib/api.ts`: API client for backend calls.
   - `app/page.tsx`: Main page with app layout.
