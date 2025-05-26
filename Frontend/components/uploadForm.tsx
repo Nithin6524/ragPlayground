@@ -11,8 +11,11 @@ import {
 } from "lucide-react";
 import { uploadPDF } from "../lib/api";
 
+import { useUpload } from "../app/context/uploadContext";
+
 export function UploadForm() {
-    const [isUploading, setIsUploading] = useState(false);
+    const { isUploading, setIsUploading } = useUpload();
+
     const [uploadStatus, setUploadStatus] = useState<
         "idle" | "success" | "error"
     >("idle");
@@ -23,7 +26,7 @@ export function UploadForm() {
     ) => {
         const files = event.target.files;
         if (!files || files.length === 0) return;
-
+        console.log("before uploading", isUploading);
         setIsUploading(true);
         setUploadStatus("idle");
 
@@ -34,7 +37,7 @@ export function UploadForm() {
                 if (!file.name.endsWith(".pdf")) {
                     throw new Error("Only PDF files are allowed");
                 }
-                const response = await uploadPDF(file);
+                await uploadPDF(file);
                 fileNames.push(file.name);
             }
             setUploadedFiles(fileNames);
@@ -43,6 +46,7 @@ export function UploadForm() {
             setUploadStatus("error");
         } finally {
             setIsUploading(false);
+            console.log("after uploading", isUploading);
         }
     };
 

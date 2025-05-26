@@ -4,6 +4,7 @@ import type React from "react";
 import { useState } from "react";
 import { Search, Loader2, Sparkles } from "lucide-react";
 import { runQuery } from "../lib/api";
+import { useUpload } from "../app/context/uploadContext";
 
 const RAG_TYPES = [
     {
@@ -34,6 +35,7 @@ interface QueryFormProps {
 }
 
 export function QueryForm({ onResults }: QueryFormProps) {
+    const { isUploading } = useUpload();
     const [query, setQuery] = useState("");
     const [selectedRAGTypes, setSelectedRAGTypes] = useState<string[]>([
         "basic",
@@ -197,12 +199,14 @@ export function QueryForm({ onResults }: QueryFormProps) {
                                 disabled={
                                     !query.trim() ||
                                     selectedRAGTypes.length === 0 ||
-                                    isQuerying
+                                    isQuerying ||
+                                    isUploading
                                 }
                                 className={`bg-gradient-to-r from-purple-600 to-violet-600  relative inline-flex items-center px-10 py-4 text-lg font-bold rounded-xl transition-all duration-300 ${
                                     !query.trim() ||
                                     selectedRAGTypes.length === 0 ||
-                                    isQuerying
+                                    isQuerying ||
+                                    isUploading
                                         ? "bg-gray-500/50 cursor-not-allowed text-gray-400"
                                         : "bg-gradient-to-r text-white shadow-2xl cursor-pointer transform hover:scale-105"
                                 }`}
