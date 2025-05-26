@@ -4,7 +4,7 @@ export function Header() {
       <div className="absolute inset-0 "></div>
       <div className="relative container mx-auto px-4 py-16 text-center">
         <div className="mb-6">
-          <h1 className="text-5xl h-28 md:text-7xl font-bold bg-gradient-to-t from-purple-950 via-violet-400 to-blue-100 bg-clip-text text-transparent mb-4">
+          <h1 className="text-5xl h-28 md:text-7xl font-bold bg-gradient-to-l from-purple-950 via-violet-400 to-blue-600 bg-clip-text text-transparent mb-4">
             RAG Playground
           </h1>
         </div>

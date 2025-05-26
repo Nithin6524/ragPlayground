@@ -39,9 +39,9 @@ export function ResultsCard({ title, result, gradient }: ResultsCardProps) {
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-bold text-white">{title}</h3>
               <div className="flex items-center space-x-4 text-sm">
-                <div className="flex items-center text-blue-300 bg-blue-500/20 px-3 py-1 rounded-full">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span className="font-semibold">{result.responseTime}s</span>
+                <div className="flex items-center text-blue-300 bg-gray-400/50 px-3 py-1 rounded-full">
+                  <Clock className="h-4 w-4 mr-1 brightness-200" />
+                  <span className="text-white font-bold">{result.responseTime}s</span>
                 </div>
                 {result.score && (
                   <div className="flex items-center text-yellow-300 bg-yellow-500/20 px-3 py-1 rounded-full">
@@ -89,10 +89,10 @@ export function ResultsCard({ title, result, gradient }: ResultsCardProps) {
                   >
                     <p className="text-gray-300 mb-3 leading-relaxed">{item.content}</p>
                     <div className="flex items-center justify-between text-xs">
-                      <span className="text-purple-400 font-semibold bg-purple-500/20 px-2 py-1 rounded">
+                      <span className="text-purple-100 bg-indigo-600 font-semibold  px-2 py-1 rounded">
                         {item.source}
                       </span>
-                      <span className="text-gray-400">Page {item.page}</span>
+                      <span className="text-white bg-amber-700 p-1 rounded ">Page {item.page}</span>
                     </div>
                   </div>
                 ))}
