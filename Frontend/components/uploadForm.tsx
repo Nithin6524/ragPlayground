@@ -5,7 +5,7 @@ import { Upload, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import { uploadPDF } from "../lib/api"; // Your API helper
 import { useUpload } from "../app/context/uploadContext";
 import axios from "axios";
-
+import { API_BASE_URL } from "../lib/api";
 export function UploadForm() {
   const { isUploading, setIsUploading } = useUpload();
   const [file, setFile] = useState<File | null>(null);
@@ -21,7 +21,7 @@ export function UploadForm() {
     const interval = setInterval(async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/pdf/progress/${taskId}`
+          `${API_BASE_URL}/pdf/progress/${taskId}`
         );
         const { progress, status } = response.data;
         setProgress(progress);
