@@ -17,7 +17,7 @@ RAG Playground is a web application for uploading PDF documents, querying their 
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/rag-playground.git
+   git clone https://github.com/Nithin6524/ragPlayground.git
    cd rag-playground
    ```
 
@@ -25,6 +25,7 @@ RAG Playground is a web application for uploading PDF documents, querying their 
    ```bash
    cd frontend
    npm install
+   ```
 
 
 3. **Set Up the Backend**:

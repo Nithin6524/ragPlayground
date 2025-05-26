@@ -1,160 +1,179 @@
 "use client";
 
-import type React from "react";
-import { useState } from "react";
-import {
-    Upload,
-    FileText,
-    CheckCircle,
-    AlertCircle,
-    Loader2,
-} from "lucide-react";
-import { uploadPDF } from "../lib/api";
-
+import React, { useState, useEffect } from "react";
+import { Upload, Loader2, CheckCircle, AlertCircle } from "lucide-react";
+import { uploadPDF } from "../lib/api"; // Your API helper
 import { useUpload } from "../app/context/uploadContext";
+import axios from "axios";
 
 export function UploadForm() {
-    const { isUploading, setIsUploading } = useUpload();
+  const { isUploading, setIsUploading } = useUpload();
+  const [file, setFile] = useState<File | null>(null);
+  const [taskId, setTaskId] = useState<string | null>(null);
+  const [progress, setProgress] = useState(0);
+  const [status, setStatus] = useState("");
+  const [message, setMessage] = useState<string | null>(null);
 
-    const [uploadStatus, setUploadStatus] = useState<
-        "idle" | "success" | "error"
-    >("idle");
-    const [uploadedFiles, setUploadedFiles] = useState<string[]>([]);
+  // Poll progress every second while task is running
+  useEffect(() => {
+    if (!taskId) return;
 
-    const handleFileUpload = async (
-        event: React.ChangeEvent<HTMLInputElement>
-    ) => {
-        const files = event.target.files;
-        if (!files || files.length === 0) return;
-        console.log("before uploading", isUploading);
-        setIsUploading(true);
-        setUploadStatus("idle");
+    const interval = setInterval(async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:8000/pdf/progress/${taskId}`
+        );
+        const { progress, status } = response.data;
+        setProgress(progress);
+        setStatus(status);
 
-        try {
-            // Upload each file to backend
-            const fileNames: string[] = [];
-            for (const file of files) {
-                if (!file.name.endsWith(".pdf")) {
-                    throw new Error("Only PDF files are allowed");
-                }
-                await uploadPDF(file);
-                fileNames.push(file.name);
-            }
-            setUploadedFiles(fileNames);
-            setUploadStatus("success");
-        } catch (error: any) {
-            setUploadStatus("error");
-        } finally {
-            setIsUploading(false);
-            console.log("after uploading", isUploading);
+        if (progress >= 100 || status.toLowerCase().includes("failed")) {
+          setIsUploading(false);
+          setMessage(
+            status.toLowerCase().includes("failed")
+              ? `Upload failed: ${status}`
+              : "PDF processed successfully!"
+          );
+          setTaskId(null);
+          setFile(null);
+          clearInterval(interval);
         }
-    };
+      } catch {
+        setIsUploading(false);
+        setMessage("Failed to fetch progress");
+        setTaskId(null);
+        setFile(null);
+        clearInterval(interval);
+      }
+    }, 1000);
 
-    return (
-        <div className="max-w-2xl mx-auto">
-            <div className="relative">
-                {/* Glass morphism card */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-indigo-500/20 rounded-2xl blur-xl  transition-all duration-300"></div>
-                <div className="relative border border-white/40 rounded-2xl p-8 shadow-2xl">
-                    <div className="text-center">
-                        <div className="mb-8">
-                            <div className="relative inline-block">
-                                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full blur-lg opacity-50"></div>
-                                <div className="relative bg-gradient-to-r from-purple-500 to-violet-500 p-4 rounded-full">
-                                    <Upload className="h-8 w-8 text-white" />
-                                </div>
-                            </div>
-                            <h2 className="text-3xl font-bold text-white mt-6 mb-3">
-                                Upload PDFs
-                            </h2>
-                            <p className="text-gray-300 text-lg">
-                                Select one or more PDF files to analyze
-                            </p>
-                        </div>
+    return () => clearInterval(interval);
+  }, [taskId, setIsUploading]);
 
-                        <div className="relative">
-                            <input
-                                type="file"
-                                accept=".pdf"
-                                multiple
-                                onChange={handleFileUpload}
-                                disabled={isUploading}
-                                className="hidden"
-                                id="pdf-upload"
-                                aria-label="Upload PDF files"
-                            />
-                            <label
-                                htmlFor="pdf-upload"
-                                className={` relative inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 cursor-pointer ${
-                                    isUploading
-                                        ? "bg-gray-500/50 cursor-not-allowed text-gray-300"
-                                        : "bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-lg  transform hover:scale-105"
-                                }`}
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-violet-600 rounded-xl blur opacity-0 transition-opacity duration-300"></div>
-                                <div className="relative flex items-center">
-                                    {isUploading ? (
-                                        <>
-                                            <Loader2 className="animate-spin -ml-1 mr-3 h-6 w-6" />
-                                            Uploading...
-                                        </>
-                                    ) : (
-                                        <>
-                                            <Upload className="-ml-1 mr-3 h-6 w-6" />
-                                            Upload PDF(s)
-                                        </>
-                                    )}
-                                </div>
-                            </label>
-                        </div>
+  // Handle file selection & upload
+  const handleFileUpload = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const selectedFile = event.target.files?.[0];
+    if (!selectedFile || !selectedFile.name.endsWith(".pdf")) {
+      setMessage("Please select a valid PDF file");
+      return;
+    }
 
-                        {/* Status Messages */}
-                        {uploadStatus === "success" && (
-                            <div className="mt-6 p-4 bg-green-500/20 border border-green-400/30 rounded-xl backdrop-blur-sm">
-                                <div className="flex items-center justify-center">
-                                    <CheckCircle className="h-6 w-6 text-green-400 mr-3" />
-                                    <span className="text-green-300 font-semibold text-lg">
-                                        PDFs processed successfully!
-                                    </span>
-                                </div>
-                            </div>
-                        )}
+    setFile(selectedFile);
+    setIsUploading(true);
+    setMessage(null);
+    setProgress(0);
+    setStatus("starting");
 
-                        {uploadStatus === "error" && (
-                            <div className="mt-6 p-4 bg-red-500/20 border border-red-400/30 rounded-xl backdrop-blur-sm">
-                                <div className="flex items-center justify-center">
-                                    <AlertCircle className="h-6 w-6 text-red-400 mr-3" />
-                                    <span className="text-red-300 font-semibold text-lg">
-                                        Upload failed. Please try again.
-                                    </span>
-                                </div>
-                            </div>
-                        )}
+    try {
+      const formData = new FormData();
+      formData.append("file", selectedFile);
+      const response = await uploadPDF(formData);
+      setTaskId(response.task_id);
+    } catch (error: any) {
+      setIsUploading(false);
+      setMessage(error.response?.data?.detail || "Upload failed");
+      setFile(null);
+    }
+  };
 
-                        {/* Uploaded Files List */}
-                        {uploadedFiles.length > 0 && (
-                            <div className="mt-8 text-left">
-                                <h3 className="text-lg font-semibold text-white mb-4">
-                                    Uploaded Files:
-                                </h3>
-                                <div className="space-y-3">
-                                    {uploadedFiles.map((fileName, index) => (
-                                        <div
-                                            key={index}
-                                            className="flex items-center p-3 bg-white/5 border border-white/10 rounded-lg backdrop-blur-sm"
-                                        >
-                                            <FileText className="h-5 w-5 text-purple-400 mr-3 flex-shrink-0" />
-                                            <span className="text-gray-300 truncate">
-                                                {fileName}
-                                            </span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-                    </div>
+  return (
+    <div className="max-w-2xl mx-auto">
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-indigo-500/20 rounded-2xl blur-xl transition-all duration-300"></div>
+        <div className="relative border border-white/40 rounded-2xl p-8 shadow-2xl">
+          <div className="text-center">
+            <div className="mb-8">
+              <div className="relative inline-block">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full blur-lg opacity-50"></div>
+                <div className="relative bg-gradient-to-r from-purple-500 to-violet-500 p-4 rounded-full">
+                  <Upload className="h-8 w-8 text-white" />
                 </div>
+              </div>
+              <h2 className="text-3xl font-bold text-white mt-6 mb-3">
+                Upload PDF
+              </h2>
+              <p className="text-gray-300 text-lg">Select a PDF file to analyze</p>
             </div>
+            <div className="relative">
+              <input
+                type="file"
+                accept=".pdf"
+                onChange={handleFileUpload}
+                disabled={isUploading} // disable input while uploading
+                className="hidden"
+                id="pdf-upload"
+                aria-label="Upload PDF file"
+              />
+              <label
+                htmlFor="pdf-upload"
+                className={`relative inline-flex items-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 cursor-pointer ${
+                  isUploading || !file
+                    ? "bg-gray-500/50 cursor-not-allowed text-gray-300"
+                    : "bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-lg transform hover:scale-105"
+                }`}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-violet-600 rounded-xl blur opacity-0 transition-all duration-300"></div>
+                <div className="relative flex items-center">
+                  {isUploading ? (
+                    <>
+                      <Loader2 className="animate-spin -ml-1 mr-3 h-6 w-6" />
+                      Processing...
+                    </>
+                  ) : (
+                    <>
+                      <Upload className="-ml-1 mr-3 h-6 w-6" />
+                      Upload PDF
+                    </>
+                  )}
+                </div>
+              </label>
+            </div>
+            {isUploading && (
+              <div className="mt-6">
+                <div className="text-white text-lg mb-2">{status}</div>
+                <div className="w-full bg-white/10 rounded-full h-2.5">
+                  <div
+                    className="bg-gradient-to-r from-purple-600 to-violet-600 h-2.5 rounded-full"
+                    style={{ width: `${progress}%` }}
+                  ></div>
+                </div>
+                <div className="text-white text-right mt-1">{progress.toFixed(0)}%</div>
+              </div>
+            )}
+            {message && (
+              <div
+                className={`mt-6 p-4 rounded-xl backdrop-blur-sm ${
+                  message.toLowerCase().includes("failed") ||
+                  message.toLowerCase().includes("valid")
+                    ? "bg-red-500/20 border border-red-400/30"
+                    : "bg-green-500/20 border border-green-400/30"
+                }`}
+              >
+                <div className="flex items-center justify-center">
+                  {message.toLowerCase().includes("failed") ||
+                  message.toLowerCase().includes("valid") ? (
+                    <AlertCircle className="h-6 w-6 text-red-400 mr-3" />
+                  ) : (
+                    <CheckCircle className="h-6 w-6 text-green-400 mr-3" />
+                  )}
+                  <span
+                    className={`font-semibold text-lg ${
+                      message.toLowerCase().includes("failed") ||
+                      message.toLowerCase().includes("valid")
+                        ? "text-red-300"
+                        : "text-green-300"
+                    }`}
+                  >
+                    {message}
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }

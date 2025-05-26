@@ -758,3 +758,349 @@ b'{"status":{"error":"Forbidden: Index required but not found for \\"filename\\"
 2025-05-25 22:11:56,808 - INFO - Reranked to 3 chunks
 2025-05-25 22:11:58,451 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
 2025-05-25 22:11:58,453 - INFO - Generated LLM response
+2025-05-26 19:24:29,895 - INFO - Processing PDF: Understanding_Rag.pdf, Task ID: 3a0f3d04-248f-4ecc-92bf-11e2f6dcd54f
+2025-05-26 19:24:30,089 - INFO - Page 1: split into 1 chunks
+2025-05-26 19:24:30,090 - INFO - Generating embedding for page 1, chunk 1
+2025-05-26 19:24:33,033 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:24:33,988 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:24:34,401 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:24:34,464 - INFO - Page 2: split into 1 chunks
+2025-05-26 19:24:34,464 - INFO - Generating embedding for page 2, chunk 1
+2025-05-26 19:24:37,371 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:24:38,280 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:24:38,664 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:24:38,714 - INFO - Page 3: split into 1 chunks
+2025-05-26 19:24:38,714 - INFO - Generating embedding for page 3, chunk 1
+2025-05-26 19:24:41,712 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:24:42,654 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:24:43,104 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:30:30,390 - INFO - Processing PDF: Understanding_Rag.pdf, Task ID: fbb03cb1-fb40-4bf3-a167-7e83064b1375
+2025-05-26 19:30:30,454 - INFO - Page 1: split into 1 chunks
+2025-05-26 19:30:30,455 - INFO - Generating embedding for page 1, chunk 1
+2025-05-26 19:30:33,492 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:30:34,382 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:30:34,748 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:30:34,808 - INFO - Page 2: split into 1 chunks
+2025-05-26 19:30:34,809 - INFO - Generating embedding for page 2, chunk 1
+2025-05-26 19:30:37,251 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:30:38,179 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:30:38,530 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:30:38,552 - INFO - Page 3: split into 1 chunks
+2025-05-26 19:30:38,552 - INFO - Generating embedding for page 3, chunk 1
+2025-05-26 19:30:41,432 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:30:42,346 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:30:42,713 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:39:47,796 - INFO - Processing PDF: The Stranger ( PDFDrive ).pdf, Task ID: 2a82ad7b-0e14-49f8-889a-f4cdaaf4a36c
+2025-05-26 19:39:47,918 - INFO - Page 2: split into 1 chunks
+2025-05-26 19:39:47,919 - INFO - Generating embedding for page 2, chunk 1
+2025-05-26 19:39:50,927 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:39:51,826 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:39:52,176 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:39:52,187 - INFO - Page 3: split into 1 chunks
+2025-05-26 19:39:52,187 - INFO - Generating embedding for page 3, chunk 1
+2025-05-26 19:39:54,991 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:39:55,882 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:39:56,239 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:39:56,249 - INFO - Page 4: split into 1 chunks
+2025-05-26 19:39:56,249 - INFO - Generating embedding for page 4, chunk 1
+2025-05-26 19:39:58,980 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:39:59,981 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:00,442 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:00,448 - INFO - Page 5: split into 1 chunks
+2025-05-26 19:40:00,449 - INFO - Generating embedding for page 5, chunk 1
+2025-05-26 19:40:03,297 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:04,153 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:04,535 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:04,546 - INFO - Page 6: split into 1 chunks
+2025-05-26 19:40:04,546 - INFO - Generating embedding for page 6, chunk 1
+2025-05-26 19:40:07,569 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:08,501 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:08,947 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:08,951 - INFO - Page 7: split into 1 chunks
+2025-05-26 19:40:08,951 - INFO - Generating embedding for page 7, chunk 1
+2025-05-26 19:40:11,696 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:12,645 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:13,046 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:13,051 - INFO - Page 8: split into 1 chunks
+2025-05-26 19:40:13,051 - INFO - Generating embedding for page 8, chunk 1
+2025-05-26 19:40:15,842 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:16,787 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:17,187 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:17,198 - INFO - Page 9: split into 1 chunks
+2025-05-26 19:40:17,199 - INFO - Generating embedding for page 9, chunk 1
+2025-05-26 19:40:20,288 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:21,195 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:21,649 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:21,652 - INFO - Page 10: split into 1 chunks
+2025-05-26 19:40:21,652 - INFO - Generating embedding for page 10, chunk 1
+2025-05-26 19:40:24,614 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:25,617 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:26,005 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:26,025 - INFO - Page 11: split into 1 chunks
+2025-05-26 19:40:26,025 - INFO - Generating embedding for page 11, chunk 1
+2025-05-26 19:40:29,584 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:30,455 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:30,815 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:30,833 - INFO - Page 12: split into 1 chunks
+2025-05-26 19:40:30,833 - INFO - Generating embedding for page 12, chunk 1
+2025-05-26 19:40:34,253 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:35,178 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:35,550 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:35,573 - INFO - Page 13: split into 1 chunks
+2025-05-26 19:40:35,573 - INFO - Generating embedding for page 13, chunk 1
+2025-05-26 19:40:39,246 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:40,196 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:40,561 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:40,580 - INFO - Page 14: split into 1 chunks
+2025-05-26 19:40:40,581 - INFO - Generating embedding for page 14, chunk 1
+2025-05-26 19:40:44,089 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:44,975 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:45,304 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:45,324 - INFO - Page 15: split into 1 chunks
+2025-05-26 19:40:45,324 - INFO - Generating embedding for page 15, chunk 1
+2025-05-26 19:40:48,745 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:49,695 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:50,037 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:50,065 - INFO - Page 17: split into 1 chunks
+2025-05-26 19:40:50,066 - INFO - Generating embedding for page 17, chunk 1
+2025-05-26 19:40:53,547 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:54,447 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:54,774 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:54,814 - INFO - Page 18: split into 1 chunks
+2025-05-26 19:40:54,815 - INFO - Generating embedding for page 18, chunk 1
+2025-05-26 19:40:58,293 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:40:59,194 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:40:59,701 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:40:59,712 - INFO - Page 19: split into 1 chunks
+2025-05-26 19:40:59,712 - INFO - Generating embedding for page 19, chunk 1
+2025-05-26 19:41:01,797 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:02,731 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:03,058 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:03,070 - INFO - Page 20: split into 1 chunks
+2025-05-26 19:41:03,071 - INFO - Generating embedding for page 20, chunk 1
+2025-05-26 19:41:05,621 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:06,516 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:06,853 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:06,867 - INFO - Page 21: split into 1 chunks
+2025-05-26 19:41:06,867 - INFO - Generating embedding for page 21, chunk 1
+2025-05-26 19:41:09,645 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:10,596 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:10,923 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:10,933 - INFO - Page 22: split into 1 chunks
+2025-05-26 19:41:10,934 - INFO - Generating embedding for page 22, chunk 1
+2025-05-26 19:41:13,610 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:14,505 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:14,838 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:14,851 - INFO - Page 23: split into 1 chunks
+2025-05-26 19:41:14,851 - INFO - Generating embedding for page 23, chunk 1
+2025-05-26 19:41:17,009 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:17,916 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:18,286 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:18,296 - INFO - Page 24: split into 1 chunks
+2025-05-26 19:41:18,296 - INFO - Generating embedding for page 24, chunk 1
+2025-05-26 19:41:20,477 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:21,356 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:21,672 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:21,681 - INFO - Page 25: split into 1 chunks
+2025-05-26 19:41:21,682 - INFO - Generating embedding for page 25, chunk 1
+2025-05-26 19:41:24,521 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:25,483 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:25,839 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:25,850 - INFO - Page 26: split into 1 chunks
+2025-05-26 19:41:25,850 - INFO - Generating embedding for page 26, chunk 1
+2025-05-26 19:41:28,645 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:29,595 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:29,918 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:29,926 - INFO - Page 27: split into 1 chunks
+2025-05-26 19:41:29,926 - INFO - Generating embedding for page 27, chunk 1
+2025-05-26 19:41:32,500 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:33,395 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:33,728 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:33,742 - INFO - Page 28: split into 1 chunks
+2025-05-26 19:41:33,742 - INFO - Generating embedding for page 28, chunk 1
+2025-05-26 19:41:36,382 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:37,332 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:37,728 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:37,735 - INFO - Page 29: split into 1 chunks
+2025-05-26 19:41:37,735 - INFO - Generating embedding for page 29, chunk 1
+2025-05-26 19:41:40,471 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:41,328 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:41,632 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:41,644 - INFO - Page 30: split into 1 chunks
+2025-05-26 19:41:41,645 - INFO - Generating embedding for page 30, chunk 1
+2025-05-26 19:41:44,551 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:45,488 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:45,833 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:45,846 - INFO - Page 31: split into 1 chunks
+2025-05-26 19:41:45,846 - INFO - Generating embedding for page 31, chunk 1
+2025-05-26 19:41:48,595 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:49,544 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:49,866 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:49,877 - INFO - Page 32: split into 1 chunks
+2025-05-26 19:41:49,878 - INFO - Generating embedding for page 32, chunk 1
+2025-05-26 19:41:52,763 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:53,766 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:54,133 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:54,143 - INFO - Page 33: split into 1 chunks
+2025-05-26 19:41:54,144 - INFO - Generating embedding for page 33, chunk 1
+2025-05-26 19:41:57,144 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:41:58,095 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:41:58,461 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:41:58,471 - INFO - Page 34: split into 1 chunks
+2025-05-26 19:41:58,471 - INFO - Generating embedding for page 34, chunk 1
+2025-05-26 19:42:00,588 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:42:01,637 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:42:01,983 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:42:01,995 - INFO - Page 35: split into 1 chunks
+2025-05-26 19:42:01,995 - INFO - Generating embedding for page 35, chunk 1
+2025-05-26 19:42:04,746 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:42:05,694 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:42:06,024 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:42:06,032 - INFO - Page 36: split into 1 chunks
+2025-05-26 19:42:06,032 - INFO - Generating embedding for page 36, chunk 1
+2025-05-26 19:42:09,114 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:42:10,205 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:42:10,554 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:42:10,567 - INFO - Page 37: split into 1 chunks
+2025-05-26 19:42:10,567 - INFO - Generating embedding for page 37, chunk 1
+2025-05-26 19:42:13,385 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:42:14,337 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:42:14,723 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:42:14,733 - INFO - Page 38: split into 1 chunks
+2025-05-26 19:42:14,734 - INFO - Generating embedding for page 38, chunk 1
+2025-05-26 19:42:17,423 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:42:18,353 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:42:18,720 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:42:18,732 - INFO - Page 39: split into 1 chunks
+2025-05-26 19:42:18,732 - INFO - Generating embedding for page 39, chunk 1
+2025-05-26 19:42:21,581 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:42:22,502 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:42:22,890 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:42:22,898 - INFO - Page 40: split into 1 chunks
+2025-05-26 19:42:22,898 - INFO - Generating embedding for page 40, chunk 1
+2025-05-26 19:42:25,681 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:42:26,595 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:42:26,937 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:42:26,949 - INFO - Page 41: split into 1 chunks
+2025-05-26 19:42:26,949 - INFO - Generating embedding for page 41, chunk 1
+2025-05-26 19:42:29,574 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:42:30,484 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:42:30,867 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:42:30,877 - INFO - Page 42: split into 1 chunks
+2025-05-26 19:42:30,877 - INFO - Generating embedding for page 42, chunk 1
+2025-05-26 19:42:33,577 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:42:34,515 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:42:34,865 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:42:34,876 - INFO - Page 43: split into 1 chunks
+2025-05-26 19:42:34,877 - INFO - Generating embedding for page 43, chunk 1
+2025-05-26 19:42:37,646 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:42:38,636 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:42:39,032 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:42:39,044 - INFO - Page 44: split into 1 chunks
+2025-05-26 19:42:39,044 - INFO - Generating embedding for page 44, chunk 1
+2025-05-26 19:42:42,028 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:42:43,068 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:42:43,449 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:42:43,462 - INFO - Page 45: split into 1 chunks
+2025-05-26 19:42:43,462 - INFO - Generating embedding for page 45, chunk 1
+2025-05-26 19:49:52,358 - INFO - Processing PDF: Understanding_Rag.pdf, Task ID: ea46ff9b-49b7-4214-be43-8ed083553453
+2025-05-26 19:49:52,531 - INFO - Page 1: split into 1 chunks
+2025-05-26 19:49:52,531 - INFO - Generating embedding for page 1, chunk 1
+2025-05-26 19:49:55,493 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:49:56,358 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:49:56,714 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:49:56,772 - INFO - Page 2: split into 1 chunks
+2025-05-26 19:49:56,773 - INFO - Generating embedding for page 2, chunk 1
+2025-05-26 19:49:59,484 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:50:00,453 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:50:00,819 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:50:00,865 - INFO - Page 3: split into 1 chunks
+2025-05-26 19:50:00,866 - INFO - Generating embedding for page 3, chunk 1
+2025-05-26 19:50:03,493 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 19:50:04,426 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 19:50:04,888 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 19:57:47,145 - INFO - Processing PDF: Understanding_Rag.pdf, Task ID: 91b30e17-f5c0-4e1d-83e2-34ff261e2673
+2025-05-26 19:57:47,145 - ERROR - PDF processing failed: I/O operation on closed file.
+2025-05-26 20:01:55,976 - INFO - Processing PDF: Understanding_Rag.pdf, Task ID: 4c3b3593-b4b7-4d52-bfc8-23427a4cdf58
+2025-05-26 20:01:56,427 - ERROR - PDF processing failed: name 'settings' is not defined
+2025-05-26 20:05:03,485 - INFO - Processing PDF: Understanding_Rag.pdf, Task ID: f3b3f01d-536e-4ba9-8ef9-b9cbe70d9c5a
+2025-05-26 20:05:07,805 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:05:08,740 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:05:09,126 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:05:12,813 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:05:13,707 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:05:14,056 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:05:17,638 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:05:18,518 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:05:18,840 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:07:22,336 - INFO - Processing PDF: Understanding_Rag.pdf, Task ID: 3720f48e-30cd-4d50-a3c3-e464355bf20d
+2025-05-26 20:07:26,129 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:07:27,045 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:07:27,397 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:07:31,060 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:07:32,040 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:07:32,391 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:07:35,576 - INFO - Processing PDF: The Stranger ( PDFDrive ).pdf, Task ID: 0c1a2b4a-149e-4068-85e1-c569496ce2a3
+2025-05-26 20:07:36,178 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:07:37,179 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:07:37,539 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:07:39,057 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:07:39,981 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:07:40,301 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:07:43,779 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:07:44,731 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:07:45,080 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:07:47,848 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:07:48,834 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:07:49,194 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:07:51,954 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:07:52,976 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:07:53,334 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:07:56,129 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:07:57,080 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:07:57,426 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:08:00,092 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:08:00,960 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:08:01,299 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:08:04,046 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:08:05,004 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:08:05,358 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:08:08,142 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:08:09,063 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:08:09,428 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:08:11,609 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:08:12,575 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:08:12,932 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:08:15,748 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:08:16,686 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:08:17,031 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:08:55,691 - INFO - Processing PDF: Understanding_Rag.pdf, Task ID: 0d70b061-bfff-4433-9706-a3c5404cf866
+2025-05-26 20:09:00,068 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:09:01,040 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:09:03,760 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:09:06,593 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:09:08,167 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:09:08,511 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:09:11,325 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:09:12,226 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:09:12,560 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:09:45,867 - INFO - Processing PDF: Understanding_Rag.pdf, Task ID: 3e338c08-864d-4034-8da9-df394bd3f3e5
+2025-05-26 20:09:49,960 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:09:50,857 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:09:51,219 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:09:54,878 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:09:55,828 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:09:56,174 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:09:59,117 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:10:00,267 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:10:00,643 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:11:50,287 - INFO - Processing PDF: Understanding_Rag.pdf, Task ID: e79bfa30-e989-4df5-b9b4-2ed9285009c6
+2025-05-26 20:11:54,810 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:11:55,760 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:11:56,105 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:11:59,852 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:12:00,825 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:12:01,172 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
+2025-05-26 20:12:04,700 - INFO - HTTP Request: GET https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-05-26 20:12:05,619 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground "HTTP/1.1 409 Conflict"
+2025-05-26 20:12:05,962 - INFO - HTTP Request: PUT https://cb94a4eb-617c-4bff-827c-28f308297bc0.us-east-1-0.aws.cloud.qdrant.io:6333/collections/rag_playground/points?wait=true "HTTP/1.1 200 OK"
