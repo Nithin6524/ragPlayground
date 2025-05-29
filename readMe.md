@@ -12,6 +12,7 @@ RAG Playground is a web application for uploading PDF documents, querying their 
 - **Modern UI**: Glassmorphism design with vibrant gradients, built with Tailwind CSS and Lucide icons.
 - **Logging**: Backend logs (`logs/app.log`) for debugging and monitoring.
 
+![rag-playground-e18n vercel app_ (1)](https://github.com/user-attachments/assets/3e871cd2-e89f-4874-8641-e387279d0741)
 
 ## Installation
 
