@@ -1,23 +1,9 @@
 import io
 import PyPDF2
-import requests
 import tiktoken
+from src.api.dependencies import get_jina_embedding
 from src.services.vector_store import store_pdf_data
 from src.core.logger import logger
-from src.core.config import settings
-def get_jina_embedding(text: str) -> list[float]:
-    url = "https://api.jina.ai/v1/embeddings"
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {settings.jina_api_key}"
-    }
-    data = {
-        "model": "jina-embeddings-v2-base-en",
-        "input": [text]
-    }
-    response = requests.post(url, headers=headers, json=data)
-    response.raise_for_status()
-    return response.json()["data"][0]["embedding"]
 
 def chunk_text_by_tokens(text: str, max_tokens: int = 8192) -> list[str]:
     encoder = tiktoken.get_encoding("cl100k_base")
