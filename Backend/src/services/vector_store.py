@@ -24,7 +24,7 @@ def store_pdf_data(filename: str, text: str, page_numbers: list[int], embedding:
                 vector=embedding,
                 payload={
                     "filename": filename,
-                    "text": text[:1000],  # truncate if needed
+                    "text": text,  
                     "pages": page_numbers
                 }
             )
