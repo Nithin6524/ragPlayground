@@ -10,8 +10,10 @@ import { Footer } from "@/components/footer";
 export default function RAGPlayground() {
     const [queryResults, setQueryResults] = useState<any[]>([]);
     return (
-        <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden">
-
+        <div
+            className="min-h-screen bg-black 
+ relative overflow-hidden"
+        >
             <div className="relative z-10">
                 <Header />
 

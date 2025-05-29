@@ -25,8 +25,8 @@ const RAG_TYPES = [
         id: "reranker",
         label: "Reranker RAG",
         description: "Advanced result reranking",
-        gradient: "from-indigo-500 to-purple-500",
-        bgGradient: "from-indigo-500/20 to-purple-500/20",
+        gradient: "from-indigo-500 to-violet-500",
+        bgGradient: "from-indigo-500/20 to-violet-500/20",
     },
 ];
 
@@ -61,7 +61,7 @@ export function QueryForm({ onResults }: QueryFormProps) {
         try {
             const queryResults = [];
             for (const ragType of selectedRAGTypes) {
-                const result = await runQuery(query, ragType);
+                const result = await runQuery(query, ragType); // runQuery is called for each selected RAG
                 queryResults.push({ ...result, rag_type: ragType }); // Ensure rag_type is included
             }
             onResults(queryResults);
@@ -79,7 +79,7 @@ export function QueryForm({ onResults }: QueryFormProps) {
                 <div className="relative  border border-white/40 rounded-2xl p-8 shadow-2xl">
                     <div className="mb-8 text-center">
                         <div className="flex items-center justify-center mb-4">
-                            <Sparkles className="h-8 w-8 text-purple-400 mr-3" />
+                            <Sparkles className="h-8 w-8 text-cyan-400 mr-3" />
                             <h2 className="text-3xl font-bold text-white">
                                 Query Configuration
                             </h2>
@@ -99,9 +99,9 @@ export function QueryForm({ onResults }: QueryFormProps) {
                                 Your Question
                             </label>
                             <div className="relative">
-                                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl blur"></div>
+                                <div className="absolute inset-0  rounded-xl blur"></div>
                                 <div className="relative flex items-center">
-                                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-pink-700 z-10" />
+                                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-cyan-400 z-10" />
                                     <input
                                         type="text"
                                         id="query"
@@ -202,7 +202,7 @@ export function QueryForm({ onResults }: QueryFormProps) {
                                     isQuerying ||
                                     isUploading
                                 }
-                                className={`bg-gradient-to-r from-purple-600 to-violet-600  relative inline-flex items-center px-10 py-4 text-lg font-bold rounded-xl transition-all duration-300 ${
+                                className={`bg-gradient-to-r from-cyan-600 to-blue-600  relative inline-flex items-center px-10 py-4 text-lg font-bold rounded-xl transition-all duration-300 ${
                                     !query.trim() ||
                                     selectedRAGTypes.length === 0 ||
                                     isQuerying ||
@@ -211,7 +211,7 @@ export function QueryForm({ onResults }: QueryFormProps) {
                                         : "bg-gradient-to-r text-white shadow-2xl cursor-pointer transform hover:scale-105"
                                 }`}
                             >
-                                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 rounded-xl blur opacity-0 "></div>
+                                <div className="absolute inset-0 bg-gradient-to-r from-cyan-600  to-blue-500 rounded-xl blur opacity-0 "></div>
                                 <div className="relative flex items-center text-gray-100">
                                     {isQuerying ? (
                                         <>
